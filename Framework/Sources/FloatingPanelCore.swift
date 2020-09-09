@@ -8,6 +8,7 @@ import UIKit.UIGestureRecognizerSubclass // For Xcode 9.4.1
 ///
 /// FloatingPanel presentation model
 ///
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelCore: NSObject, UIGestureRecognizerDelegate {
     // MUST be a weak reference to prevent UI freeze on the presentation modally
     weak var viewcontroller: FloatingPanelController?
@@ -938,6 +939,7 @@ class FloatingPanelCore: NSObject, UIGestureRecognizerDelegate {
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelPanGestureRecognizer: UIPanGestureRecognizer {
     fileprivate weak var floatingPanel: FloatingPanelCore?
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {

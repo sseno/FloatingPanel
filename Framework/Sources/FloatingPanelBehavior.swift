@@ -5,6 +5,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension 10.0, *)
 public protocol FloatingPanelBehavior {
     /// Asks the behavior if the floating panel should project a momentum of a user interaction to move the proposed position.
     ///
@@ -70,6 +71,7 @@ public protocol FloatingPanelBehavior {
     func allowsRubberBanding(for edge: UIRectEdge) -> Bool
 }
 
+@available(iOSApplicationExtension 10.0, *)
 public extension FloatingPanelBehavior {
     func shouldProjectMomentum(_ fpc: FloatingPanelController, for proposedTargetPosition: FloatingPanelPosition) -> Bool {
         return false
@@ -124,8 +126,10 @@ public extension FloatingPanelBehavior {
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 private let defaultBehavior = FloatingPanelDefaultBehavior()
 
+@available(iOSApplicationExtension 10.0, *)
 public class FloatingPanelDefaultBehavior: FloatingPanelBehavior {
     public init() { }
 

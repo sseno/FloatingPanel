@@ -5,6 +5,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelModalTransition: NSObject, UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
@@ -21,6 +22,7 @@ class FloatingPanelModalTransition: NSObject, UIViewControllerTransitioningDeleg
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelPresentationController: UIPresentationController {
     override func presentationTransitionWillBegin() {
         // Must call here even if duplicating on in containerViewWillLayoutSubviews()
@@ -85,6 +87,7 @@ class FloatingPanelPresentationController: UIPresentationController {
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelModalPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         guard
@@ -106,6 +109,7 @@ class FloatingPanelModalPresentTransition: NSObject, UIViewControllerAnimatedTra
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelModalDismissTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         guard

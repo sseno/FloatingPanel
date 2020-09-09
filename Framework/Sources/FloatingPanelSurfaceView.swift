@@ -6,6 +6,7 @@
 import UIKit
 
 /// A view that presents a surface interface in a floating panel.
+@available(iOSApplicationExtension 10.0, *)
 public class FloatingPanelSurfaceView: UIView {
 
     /// A GrabberHandleView object displayed at the top of the surface view.

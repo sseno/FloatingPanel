@@ -119,6 +119,7 @@ extension UIScrollView {
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 extension UISpringTimingParameters {
     public convenience init(dampingRatio: CGFloat, frequencyResponse: CGFloat, initialVelocity: CGVector = .zero) {
         let mass = 1 as CGFloat
@@ -137,7 +138,9 @@ extension CGPoint {
     }
 }
 
+@available(iOSApplicationExtension 10.0, *)
 extension UITraitCollection {
+    @available(iOSApplicationExtension 10.0, *)
     func shouldUpdateLayout(from previous: UITraitCollection) -> Bool {
         return previous.horizontalSizeClass != horizontalSizeClass
             || previous.verticalSizeClass != verticalSizeClass

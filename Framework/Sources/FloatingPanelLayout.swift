@@ -162,6 +162,7 @@ struct LayoutSegment {
     let upper: FloatingPanelPosition?
 }
 
+@available(iOSApplicationExtension 10.0, *)
 class FloatingPanelLayoutAdapter {
     weak var vc: FloatingPanelController!
     private weak var surfaceView: FloatingPanelSurfaceView!
@@ -444,6 +445,7 @@ class FloatingPanelLayoutAdapter {
         surfaceView.bottomOverflow = vc.view.bounds.height + layout.topInteractionBuffer
     }
 
+    @available(iOSApplicationExtension 10.0, *)
     func updateInteractiveTopConstraint(diff: CGFloat, allowsTopBuffer: Bool, with behavior: FloatingPanelBehavior) {
         defer {
             layoutSurfaceIfNeeded() // MUST be called to update `surfaceView.frame`

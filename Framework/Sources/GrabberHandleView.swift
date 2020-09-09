@@ -5,6 +5,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension 10.0, *)
 public class GrabberHandleView: UIView {
 
     public var barColor = UIColor(displayP3Red: 0.76, green: 0.77, blue: 0.76, alpha: 1.0) { didSet { backgroundColor = barColor } }
